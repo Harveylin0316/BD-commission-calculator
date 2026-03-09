@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BD 業績獎金計算器｜業務員工</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BD 業績獎金計算器</h1>
+      <p class="subtitle">業務員工 · 每季獎金試算</p>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <h2>輸入業績資料</h2>
+        <form id="commission-form">
+          <div class="form-group">
+            <label for="table-booking-monthly">每月簽約訂位餐廳數量</label>
+            <input type="number" id="table-booking-monthly" name="tableBookingMonthly" min="0" step="1" placeholder="0" required>
+          </div>
+          <div class="form-group">
+            <label for="menu-signup-monthly">每月簽約 Menu 套餐數量</label>
+            <input type="number" id="menu-signup-monthly" name="menuSignupMonthly" min="0" step="1" placeholder="0" required>
+          </div>
+          <div class="form-group">
+            <label for="menu-gmv-quarterly">每季簽約餐廳 Menu 套餐銷售總額（稅前，NTD）</label>
+            <input type="number" id="menu-gmv-quarterly" name="menuGmvQuarterly" min="0" step="1000" placeholder="0" required>
+          </div>
+          <div class="form-group">
+            <label for="rms-pois-quarterly">每季簽約餐廳 RMS 銷售家數（POI）</label>
+            <input type="number" id="rms-pois-quarterly" name="rmsPoisQuarterly" min="0" step="1" max="40" placeholder="0" required>
+          </div>
+          <button type="submit" class="btn-calculate">計算獎金</button>
+        </form>
+      </section>
+
+      <section class="result-section" id="result-section" aria-live="polite">
+        <h2>每季獎金明細</h2>
+        <div id="result-content">
+          <p class="result-placeholder">請輸入業績後按下「計算獎金」。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>BD Commission Calculator · 僅供試算，實際獎金以公司規定為準</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

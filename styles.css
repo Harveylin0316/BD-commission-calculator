@@ -1,0 +1,191 @@
+/* BD Commission Calculator - 業務員工 */
+
+:root {
+  --bg: #f5f3ef;
+  --card: #fff;
+  --text: #1a1a1a;
+  --text-muted: #5c5c5c;
+  --accent: #2d5a3d;
+  --accent-hover: #234a30;
+  --border: #e0ddd8;
+  --note: #6b6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.input-section,
+.result-section {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.input-section h2,
+.result-section h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(45, 90, 61, 0.15);
+}
+
+.btn-calculate {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-calculate:hover {
+  background: var(--accent-hover);
+}
+
+.btn-calculate:active {
+  transform: scale(0.99);
+}
+
+.result-section .result-placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.result-list {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.result-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.result-list li:last-of-type {
+  border-bottom: none;
+}
+
+.result-list .label {
+  flex: 1 1 100%;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.result-list .value {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.result-list .note {
+  flex: 1 1 100%;
+  font-size: 0.75rem;
+  color: var(--note);
+  margin-top: 0.25rem;
+}
+
+.total-row {
+  padding: 1rem 0 0 0;
+  margin-top: 0.5rem;
+  border-top: 2px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.total-row .label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.total-row .value {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}
+
+footer p {
+  margin: 0;
+}
