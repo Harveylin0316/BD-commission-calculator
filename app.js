@@ -108,10 +108,12 @@ form.addEventListener('submit', (e) => {
       <li>
         <span class="label">Table Booking Sign-up Bonus（季）</span>
         <span class="value">NTD ${formatCurrency(result.tableBookingQuarterly)}</span>
+        <span class="note">該獎金以每月為結算發放。</span>
       </li>
       <li>
         <span class="label">Menu Sign-up Bonus（季）</span>
         <span class="value">NTD ${formatCurrency(result.menuSignupQuarterly)}</span>
+        <span class="note">該獎金以每月為結算發放。</span>
       </li>
       <li>
         <span class="label">Net Menu GMV Commission（季）</span>
